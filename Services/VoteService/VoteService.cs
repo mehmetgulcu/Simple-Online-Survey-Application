@@ -50,7 +50,7 @@ namespace Simple_Online_Survey_Application.Services.VoteService
 
                 await _context.SaveChangesAsync();
 
-                response.Data = "Vote registered successfully.";
+                response.Data = "Vote registered successfully.";  // Wrap the success message in "data"
             }
             catch (Exception ex)
             {
@@ -60,6 +60,7 @@ namespace Simple_Online_Survey_Application.Services.VoteService
 
             return response;
         }
+
 
         public async Task<ServiceResponse<PollResultDto>> GetPollResultsAsync(int pollId, int appUserId)
         {

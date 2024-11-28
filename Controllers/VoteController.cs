@@ -32,7 +32,7 @@ namespace Simple_Online_Survey_Application.Controllers
                 if (!response.Success)
                     return BadRequest(response.Message);
 
-                return Ok(response.Data);
+                return Ok(new { message = response.Data });
             }
             catch (Exception ex)
             {

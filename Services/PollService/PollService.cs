@@ -40,7 +40,7 @@ namespace Simple_Online_Survey_Application.Services.PollService
                 var poll = new Poll
                 {
                     Title = pollDto.Title,
-                    UserId = pollDto.UserId,
+                    UserId = appUserId,
                     Options = pollDto.Options.Select(opt => new Option { OptionText = opt }).ToList()
                 };
 
